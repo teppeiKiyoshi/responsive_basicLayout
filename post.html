@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/utilities.css">
+  <title>Pot One Blog</title>
+</head>
+
+<body>
+  <header class="hero blog">
+    <div class="navbar top" id="navbar">
+      <h1 class="logo">
+        <span class="text-primary"><i class="fas fa-book-open"></i> Edge</span> Ledger
+      </h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html#about">About</a></li>
+          <li><a href="index.html#cases">Cases</a></li>
+          <li><a href="index.html#blog">Blog</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="content">
+      <h1>Blog</h1>
+    </div>
+  </header>
+
+  <!-- Blog  -->
+  <main>
+   <section class="post">
+     <h2>Blog Post One</h2>
+     <p class="meta">
+       <img src="../img/blog/blog1.jpg" alt="">
+      <i class="fas fa-user"></i> Posted by <strong>Kate Smith</strong> | January 2022
+    </p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse soluta ducimus, corrupti repellat dolorum
+      porro illum non? Ullam ex, odit, optio dolore tempore accusamus modi dicta cupiditate repellendus quis
+      numquam?</p>
+      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic quo labore commodi dicta similique est esse reprehenderit ipsa at! Perspiciatis blanditiis natus eum neque repellendus porro ab praesentium non debitis magni? Cumque hic natus fugit dicta nesciunt, numquam quod consequuntur. Excepturi dolores quia, itaque fuga corporis officia expedita a facilis quas hic modi neque obcaecati nulla eaque suscipit id provident!
+      </p>
+      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorem consequatur veniam consectetur quasi suscipit. Magnam modi repellat repudiandae est vel rerum voluptas unde nostrum cupiditate, cumque corporis minus officiis distinctio, magni, laboriosam ab quam quo reprehenderit! Animi quos delectus corrupti facere quaerat at, ad ducimus nihil architecto esse voluptatibus necessitatibus?</p>
+   </section>
+
+  </main>
+
+  <footer class="footer bg-dark">
+    <div class="social">
+      <a href=""><i class="fab fa-facebook fa-2x"></i></a>
+      <a href=""><i class="fab fa-twitter fa-2x"></i></a>
+      <a href=""><i class="fab fa-youtube fa-2x"></i></a>
+      <a href=""><i class="fab fa-linkedin fa-2x"></i></a>
+    </div>
+    <p>Copyright &copy; 2020 - EdgeLedger</p>
+  </footer>
+
+  <script>
+    const navbar = document.getElementById('navbar');
+    let scrolled = false;
+
+    window.onscroll = function() {
+      if (window.pageYOffset > 100) {
+        navbar.classList.remove('top');
+        if(!scrolled) {
+          navbar.style.transform = 'translateY(-70px)';
+        }
+        setTimeout(function() {
+          navbar.style.transform = 'translateY(0)';
+          scrolled = true;
+        }, 200);
+      } else {
+        navbar.classList.add('top');
+        scrolled = false;
+      }
+    };
+  </script>
+
+</body>
+
+</html>
